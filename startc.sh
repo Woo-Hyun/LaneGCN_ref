@@ -1,10 +1,8 @@
 docker run \
     --runtime=nvidia \
-    --name lanegcn \
-    --rm \
-    --shm-size="20g" \
+    --name lanegcn_test \
     -d \
-    -p 0.0.0.0:16006:6006 \
     -it \
-    zhaone/lanegcn:v1
+	-v /media/nas_db/datasets:/workspace/datasets \
+    lanegcn:v1.0
 
